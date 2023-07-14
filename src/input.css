@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply max-w-[120rem] mx-auto p-[1.5rem] w-full;
+}
+
+@layer components {
+    /* .body {
+        @apply bg-night-city
+    } */
+
+    /* ---- HEADER ---- */
+    .header {
+        @apply bg-gray-500 fixed w-full duration-[.5s] 
+    }
+
+    .header.active {
+        @apply bg-gray-700 duration-[.5s] 
+    }
+
+    .header__wrapper {
+        @apply flex items-center justify-between
+    }
+
+    /* ---- BRANDING ---- */
+    .branding {
+        @apply flex items-center
+    }
+    .branding img {
+        @apply w-16 h-16
+    }
+
+    .branding span {
+        @apply text-white text-3xl font-bold
+    }
+
+    .header__nav {
+        @apply hidden
+    }
+
+    .toggle__menu {
+        @apply flex flex-col gap-[.3rem]
+    }
+
+    .toggle__menu span {
+        @apply w-[2rem] h-[.2rem] bg-white block rounded-full
+    }
+
+
+
+    .batches__tab ul {
+        @apply bg-gray-700 flex justify-between py-[.3rem]
+    }
+
+    .batches__tab ul li a {
+        @apply text-white p-[1rem]
+    }
+
+    .batches__tab ul li.active  {
+        @apply text-yellow-500 bg-teal-500 mx-2 rounded-full
+    }
+
+    .batches__tab ul li.active a {
+        @apply text-amber-700 underline decoration-yellow-400
+    }
+
+    .batches__content {
+        @apply relative
+    }
+
+    .batches__tab__ul.gray {
+        @apply bg-gray-700
+    }
+
+    .batches__tab__content {
+        @apply flex gap-[3rem] items-center absolute opacity-0 ease-in-out duration-[.5s] right-[0rem]
+    }
+
+    .batches__tab__content.active {
+        @apply opacity-[1] ease-in-out duration-[.5s] right-[5rem]
+    }
+
+    .batches__tab__content img {
+        @apply max-w-[10rem] max-h-[20rem]
+    }
+
+    .batches__trainee__desc {
+        @apply text-amber-700 bg-teal-500 p-[1rem] mr-[1rem] rounded-xl
+    }
+    .batches__trainee__desc h1 {
+        @apply text-[1.5rem] font-bold underline decoration-yellow-400
+    }
+
+    .batches__trainee__desc h2 {
+        @apply text-[1.2rem]
+    }
+}
+
+/* ---- BANNER ---- */
+.banner { // text-center icenter sa x-axis, items-center = align-items: center icenter sa y-axis
+    @apply bg-night-city h-[100vh] w-[100vw] bg-cover flex items-center text-center
+}
+
+.banner h1 {
+    @apply text-white 
+}
